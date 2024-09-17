@@ -1,8 +1,8 @@
-module "vpc" {
-  source = "./vpc"
+# module "vpc" {
+#   #source = "./vpc"
 
-  allowed-iplist = ["0.0.0.0/0"]
+#   allowed-iplist = ["0.0.0.0/0"]
 
-  vpc-name = "vpc-glpi"  
-}
+#   vpc-name = "vpc-glpi"  
+# }
 

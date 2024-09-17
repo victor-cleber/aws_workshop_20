@@ -1,24 +1,37 @@
+variable "allowed-iplist" {
+  description = "Remote IP can access the AWS infra"
+  type        = set(string)
+  default     = ["0.0.0.0/0"]
+}
+
+variable "vpc-name" {
+  type    = string
+  default = "vpc-glpi"
+}
+
+
 variable "region" {
   type        = string
   description = "AWS region where the infrastructure will be created."
-  default     = "us-east-1"
+  #default     = "ap-southeast-1"
+  default = "us-east-1"
 }
 
 variable "workshop" {
   type        = string
   description = "Workshop Edition"
-  default     = "workshop-20"
+  default     = "Workshop-20"
 }
 
 variable "customer" {
   type        = string
-  description = "Autor de edição."
-  default     = "Cloud Treinamentos"
+  description = "Customer"
+  default     = "Cloud Treinamentos - bootacamp"
 }
 
 variable "autor" {
   type        = string
-  description = "Member of"
+  description = "Autor"
   default     = "Group 6"
 }
 

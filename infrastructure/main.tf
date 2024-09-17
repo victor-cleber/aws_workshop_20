@@ -6,16 +6,16 @@ terraform {
       version = "5.40.0"
     }
   }
-  backend "s3" {
-    bucket         	   = "glpi-remote-state"
-    key                = "state/terraform.tfstate"
-    region         	   = "us-east-1"
-    encrypt        	   = true    
-}
+  #   backend "s3" {
+  #     bucket         	   = "glpi-remote-state"
+  #     key                = "state/terraform.tfstate"
+  #     region         	   = "us-east-1"
+  #     encrypt        	   = true    
+  # }
 }
 
 provider "aws" {
-  region = var.region  
+  region  = var.region
   profile = "default"
   default_tags {
     tags = {
@@ -26,4 +26,3 @@ provider "aws" {
     }
   }
 }
-
